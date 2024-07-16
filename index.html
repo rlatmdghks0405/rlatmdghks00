@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김승환의 자기소개 홈페이지</title>
+    <style>
+        body {
+            font-family: '굴림체', Arial, sans-serif;
+            background-image: url(https://img1.newsis.com/2023/07/12/NISI20230712_0001313626_web.jpg); /* 고양이 사진 경로를 넣어주세요 */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .welcome {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .info {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contact {
+            font-size: 20px;
+        }
+        .btn-enter {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn-enter:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="welcome">환영합니다</h1>
+        <button class="btn-enter" onclick="showInfo()">입장</button>
+    </div>
+
+    <script>
+        function showInfo() {
+            var infoWindow = window.open("", "_blank", "width=400,height=400,scrollbars=yes,resizable=yes");
+            infoWindow.document.write(`
+                <html>
+                <head>
+                    <title>김승환의 정보</title>
+                    <style>
+                        body {
+                            font-family: '굴림체', Arial, sans-serif;
+                            background-image: url(https://img1.newsis.com/2023/07/12/NISI20230712_0001313626_web.jpg); /* 고양이 사진 경로를 넣어주세요 */
+                            background-size: cover;
+                            background-position: center;
+                            color: white;
+                            text-align: center;
+                            padding: 50px;
+                        }
+                        .info {
+                            font-size: 24px;
+                            margin-bottom: 20px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>김승환의 정보</h1>
+                    <div class="info">
+                        <p>이름: 김승환</p>
+                        <p>나이: 만 17세</p>
+                        <p>MBTI: ISTP</p>
+                        <p>초등학교: 옥곡초등학교</p>
+                        <p>중학교: 장산중학교</p>
+                        <p>현재 재학중인 학교: 사동고등학교</p>
+                        <p>연락처: 010-5828-4583</p>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>
+
